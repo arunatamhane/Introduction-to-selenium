@@ -6,13 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class IsEnabled {
-	public static void main(String[] args) {
-		WebDriver driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.instagram.com");
-		WebElement login=driver.findElement(By.xpath("//button[.='Log in']"));
-		System.out.println(login.isEnabled());
+	
+		public static void main(String[] args) {
+			WebDriver driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get("https://terna.qualcampus.com/Account/LogOn");
+			WebElement web=driver.findElement(By.xpath("//button[@type=\"submit\"]"));
+			System.out.println(web.isEnabled());
 		
+		  driver.quit();
 		
 	}
 
